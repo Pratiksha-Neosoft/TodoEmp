@@ -11,8 +11,9 @@ $age=$_POST['age'];
 $city=$_POST['city'];
 $image=$_FILES['image'];
 if(empty($username)||empty($email)||empty($name)||empty($age)||empty($city)||empty($image)){
-    $msg="All fields are required!";    
-}else{
+    $msg="All fields are required!";   
+}
+else{
     $msg=$obj->insert($username,$email,$name,$age,$city,$image);
     $username=$email=$name=$age=$city=$image="";
 }
